@@ -15,7 +15,7 @@ You can also run with docker:
 ```bash
 cd yecdebunks
 docker build -t yecdebunks .
-docker run -p 3000:3000
+docker run -p 3000:3000 yecdebunks
 ```
 
 Then visit http://localhost:3000 in your browser
