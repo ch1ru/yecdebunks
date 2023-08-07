@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <nav className='NavbarItems flex bg-slate-900 justify-between p-6 text-white fixed w-screen px-6 shadow-2xl z-10'>
-        <h1>YEC Stories</h1>
+        <h1>YEC Debunks</h1>
         <ul className='flex gap-6'>
             <li>
                 <MenuButton to='/' active={location.pathname == '/'}>Home</MenuButton>
@@ -24,7 +24,7 @@ function Navbar() {
                 <MenuButton to='/articles' active={location.pathname.includes('/articles')}>Articles</MenuButton>
             </li>
             <li>
-                <MenuButton to='/hebrewstudy' active={location.pathname == '/hebrewstudy'}>Hebrew Study</MenuButton>
+                <MenuButton to='/hebrewstudy' active={location.pathname.includes('/hebrewstudy')}>Hebrew Study</MenuButton>
             </li>
         </ul>
         <div className='flex content-center text-center items-center'>

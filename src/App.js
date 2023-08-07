@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import HebrewStudy from './pages/HebrewStudy';
+import Contents from './components/Contents';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
           <Route path='/' exact element={<Home />} />
           <Route path='/articles' exact element={<Articles />} />
           <Route path='/articles/:id' exact element={<Article />} />
-          <Route path='/hebrewstudy' exact element={<HebrewStudy />} />
+          <Route path='/hebrewstudy' exact element={<Contents />} />
+          <Route path='/hebrewstudy/:bookid' exact element={<HebrewStudy />} />
         </Routes>
         <Footer />
       </div>

@@ -8,14 +8,15 @@ function Search(props) {
   
   return (
     <>
-    <div className='text-center justify-center items-center content-center flex-col px-[70] md:px-[150px] pt-24'>
-        <div class="flex justify-center">
-          <img src={props.backdrop} className=' object-cover shadow-md rounded-2xl h-52 w-screen' />
-        </div>
-        <div className='bg-white shadow-lg p-4 rounded-lg absolute mt-[-20px] mx-[20%] flex items-center justify-center'>
+    <div className='text-center justify-center items-center content-center flex-col lg:px-[70] md:px-16 px-4 pt-24'>
+        <div class="flex justify-center h-64">
+          <img src={props.backdrop} className=' object-cover shadow-md rounded-2xl h-56 w-screen' />
+          <div className='bg-white shadow-lg p-4 rounded-lg absolute flex self-end items-end justify-center'>
             <IoSearchOutline className='text-[20px] text-gray-400'/>
             <input onChange={e => {props.updateSearch(e.target.value); setSearchText(e.target.value)}} value={searchText} type='text' placeholder='Search' className='outline-none' />
+          </div>
         </div>
+        
     </div>
 
     

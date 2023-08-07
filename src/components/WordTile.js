@@ -1,16 +1,8 @@
-import React, { useEffect } from 'react'
-import { useRaisedShadow } from './Use-raised-shadow'
-import { useMotionValue, Reorder } from 'framer-motion'
+import React from 'react'
   
-  export const WordTile = ({ item }) => {
-    const y = useMotionValue(0);
-    const boxShadow = useRaisedShadow(y);
+  export const WordTile = (props) => {
 
-    
-  
     return (
-      <Reorder.Item value={item} id={item} style={{ boxShadow, y }}>
-        <p class="outline outline-1 bg-white shadow-md rounded-lg p-2 outline-blue-500">{item}</p>
-      </Reorder.Item>
+        <p className=" cursor-pointer hover:text-blue-500 hover:scale-105 transition-all text-2xl">{props.item}</p>
     );
   };
