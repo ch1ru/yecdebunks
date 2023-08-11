@@ -54,7 +54,7 @@ export function Home() {
                 <motion.div animate="enter" initial="initial" variants={titleVariant}>
                     <div className="h-screen flex-col justify-center w-full">
                     <h1 className="pt-96  text-center text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-gray-300">YEC Debunks</h1>
-                    <h3 className="text-center text-xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Debunking religious fundamentalist pseudoscience</h3>
+                    <h3 className="text-center text-xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Debunking religious pseudoscience</h3>
                     </div>
                 </motion.div>
             </section>

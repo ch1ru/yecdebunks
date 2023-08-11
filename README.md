@@ -1,6 +1,6 @@
 # YEC Debunks
 
-This project was created to debunk some of the misconceptions and lies told by young earth creationism. 
+This project was created to debunk some of the misconceptions and lies told by young earth creationists. 
 
 ## Running locally
 

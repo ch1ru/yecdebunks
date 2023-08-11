@@ -63,6 +63,7 @@ function HebrewStudy() {
       .then((response) => {
         var xml = new XMLParser().parseFromString(response.data);    // Assume xmlText contains the example XML
         setBook(xml.children)
+        console.log(xml.children)
       });
     }
 
@@ -106,16 +107,25 @@ function HebrewStudy() {
   return (
     <PageTransition>
     <div>
-      <section class="p-8 pt-32">
+      <section class="p-8 pt-28">
       <h1 className=' text-center text-3xl font-bold'>{book[0]?.children[4].value}</h1>
       <h2 className='text-center text-xl mb-16'>{book[0]?.children[0].value}</h2>
+      
+      <div className='flex flex-row-reverse text-justify flex-wrap content-center items-center'>
+      <h1 className='text-5xl font-bold pt-4'>{chapterLocation}</h1>
       {
           book[chapterLocation]?.children.map((verse, idx) => {
-            return <div className='flex flex-row-reverse gap-2 mt-6 pr-8'>{Headings[idx]}{verse.children.map(word => {
+            return <div className='flex flex-row-reverse gap-2 mt-6 px-1'>{Headings[idx]}{verse.children.map(word => {
               return <WordTile item={word.value} />
             })}</div>
           })
       }
+      </div>
+
+      <div className='flex justify-between px-2 content-center items-center mt-10'>
+        {chapterLocation > 1 ? <button onClick={() => setChapterLocation(chapterLocation - 1)} className='p-2 hover:scale-105 transition-all hover:text-blue-500'>{`<<Chapter ${chapterLocation - 1}`}</button> : <div />}
+        {chapterLocation < book?.length + 1 ? <button onClick={() => setChapterLocation(chapterLocation + 1)} className='p-2 hover:scale-105 transition-all hover:text-blue-500'>{`Chapter ${chapterLocation + 1}>>`}</button> : <div />}
+      </div>
       </section>
 
     </div>
